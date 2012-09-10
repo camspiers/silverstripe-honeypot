@@ -5,7 +5,7 @@ class HoneyPotField extends FormField
 
     public function validate($validator)
     {
-        if (!is_null($this->value)) {
+        if ($this->value !== '') {
             $validator->validationError(
                 $this->name, 
                 "This field should not be completed",
