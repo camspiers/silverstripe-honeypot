@@ -1,0 +1,5 @@
+{
+    "name": "camspiers/honeypot",
+    "type": "silverstripe-module",
+    "minimum-stability": "dev"
+}
