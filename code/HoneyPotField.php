@@ -17,4 +17,9 @@ class HoneyPotField extends FormField
         return true;
     }
 
+    public function FieldHolder()
+    {
+        return $this->renderWith('HoneyPotField_holder');
+    }
+
 }
