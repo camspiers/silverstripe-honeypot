@@ -1,6 +1,6 @@
 <?php
 
-class HoneyPotField extends FormField
+class HoneyPotField extends TextField
 {
 
     public function validate($validator)
