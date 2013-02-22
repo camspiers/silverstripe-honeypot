@@ -1,5 +1,7 @@
 {
     "name": "camspiers/honeypot",
     "type": "silverstripe-module",
-    "minimum-stability": "dev"
+    "require": {
+        "composer/installers": "~1.0"
+    }
 }
