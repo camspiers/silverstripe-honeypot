@@ -7,13 +7,14 @@ class HoneyPotField extends TextField
     {
         if ($this->value !== '') {
             $validator->validationError(
-                $this->name, 
+                $this->name,
                 "This field should not be completed",
-                "validation", 
+                "validation",
                 false
             );
 
         }
+
         return true;
     }
 
