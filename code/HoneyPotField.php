@@ -17,7 +17,7 @@ class HoneyPotField extends TextField
         return true;
     }
 
-    public function FieldHolder()
+    public function FieldHolder($properties = array())
     {
         return $this->renderWith('HoneyPotField_holder');
     }
