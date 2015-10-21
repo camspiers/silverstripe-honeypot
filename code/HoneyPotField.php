@@ -9,10 +9,10 @@ class HoneyPotField extends TextField
             $validator->validationError(
                 $this->name,
                 "This field should not be completed",
-                "validation",
-                false
+                "validation"
             );
 
+            return false;
         }
 
         return true;
