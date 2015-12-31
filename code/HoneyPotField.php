@@ -22,5 +22,4 @@ class HoneyPotField extends TextField
     {
         return $this->renderWith('HoneyPotField_holder');
     }
-
 }
