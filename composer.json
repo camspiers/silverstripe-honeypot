@@ -1,8 +1,8 @@
 {
     "name": "camspiers/honeypot",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "require": {
-        "silverstripe/spamprotection": "~2.0.0",
+        "silverstripe/spamprotection": "~3.0",
         "composer/installers": "~1.0"
     }
 }
