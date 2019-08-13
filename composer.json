@@ -8,7 +8,6 @@
     "autoload": {
         "psr-4": {
             "Heyday\\SilverStripe\\HoneyPot\\": "code/"
-
         }
     }
 }
