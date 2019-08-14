@@ -1,15 +1,38 @@
-# SilverStripe honeypot
+# SilverStripe Honey Pot
 
-For a SilverStripe `2.4` compatible version use the branch `1.0`
+A SilverStripe 4.x compatible version of camspiers/honeypot
 
 ## Installation (with composer)
 
-	$ composer require camspiers/honeypot
+	$ composer require heyday/silverstripe-honeypot
 
-Set the default spam protector in *mysite/_config/spamprotection.yml*
+Set the default spam protector in *app/_config/spamprotection.yml*
 
 	---
 	name: spamprotection
 	---
-	FormSpamProtectionExtension:
-	  default_spam_protector: HoneyPotSpamProtector
+	SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
+	  default_spam_protector: Heyday\SilverStripe\HoneyPot\HoneyPotSpamProtector
+
+Or, on a form by form basis
+
+    use Heyday\SilverStripe\HoneyPot\HoneyPotField;
+    use SilverStripe\Forms\Form;
+    use SilverStripe\Control\Controller;
+    use SilverStripe\Forms\FieldList;
+
+    /**
+     * Class SomeForm
+     */
+    class SomeForm extends Form
+    {
+        /**
+         * @param Controller $controller
+         */
+        public function __construct(Controller $controller)
+        {
+            $fields = new FieldList();
+            $fields->push(new HoneyPotField('Website')); // 'Website' here can be any old string
+            ...
+        }
+    }
